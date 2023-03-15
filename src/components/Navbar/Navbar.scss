@@ -1,0 +1,57 @@
+.app__navbar {
+  width: 100%;
+  padding: 1rem 2rem;
+  background: var(--color-black);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &-logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    img {
+      width: 150px;
+    }
+  }
+
+  &-links {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+
+    li {
+      margin: 0 1rem;
+      cursor: pointer;
+
+      &:hover {
+        color: var(--color-grey);
+      }
+    }
+  }
+
+  &-login {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    a {
+        margin: 0 1rem;
+        text-decoration: none;
+        transition: 0.5s ease;
+
+        &:hover {
+            border-bottom: 1px solid var(--color-golden);
+        }
+    }
+
+    div {
+        width: 1px;
+        height: 30px;
+        background-color: var(--color-grey);
+    }
+  }
+}
