@@ -1,0 +1,71 @@
+@import "../../index.scss";
+
+.app__aboutus {
+  position: relative;
+
+  &-overlay {
+    position: absolute;
+    inset: 0;
+
+    img {
+      width: 391px;
+      height: 415px;
+      z-index: 0;
+
+      @include devices(mobile) {
+        width: 80%;
+        height: 320px;
+      }
+    }
+  }
+
+  &-content {
+    width: 100%;
+    z-index: 2;
+
+    @include devices(tablet) {
+      flex-direction: column;
+    }
+
+    &_div {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+
+      p {
+        margin: 2rem 0;
+        color: var(--color-grey);
+      }
+    }
+
+    &_about {
+      justify-content: flex-end;
+      align-items: flex-end;
+
+      text-align: right;
+    }
+
+    &_knife {
+      margin: 2rem 4rem;
+
+      @include devices(mobile) {
+        margin: 4rem 0;
+      }
+
+      img {
+        height: 910px;
+
+        @include devices(tablet) {
+          height: 500px;
+        }
+      }
+    }
+
+    &_history {
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      text-align: left;
+    }
+  }
+}
