@@ -10,6 +10,29 @@
     letter-spacing: 0.04em;
     text-transform: uppercase;
     line-height: 117px;
+
+    @include devices(tablet) {
+      font-size: 70px;
+      line-height: 90px;
+    }
+
+    @include devices(mobile) {
+      font-size: 48px;
+      line-height: 60px;
+    }
+  }
+
+  &-p {
+    margin: 2rem 0;
+
+    @include devices(tablet) {
+      margin: 1rem 0 1.5rem;
+    }
+
+
+    @include devices(mobile) {
+        margin: 0.5rem 0 1rem;
+      }
   }
 
   &-img {
