@@ -1,0 +1,70 @@
+@import "../../index.scss";
+
+.app__chef {
+  &-picture {
+    @include devices(computer) {
+      justify-content: center;
+    }
+  }
+
+  &-content {
+    width: 100%;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+
+    @include devices(computer) {
+      margin-top: 2.5rem;
+    }
+
+    &_quote {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+
+      img {
+        margin: 0 1rem 1rem 0;
+        width: 47px;
+        height: 40px;
+      }
+    }
+
+    &_text {
+      text-align: justify;
+    }
+  }
+
+  &-sign {
+    width: 100%;
+    margin-top: 3rem;
+
+    p {
+      &:first-child {
+        color: var(--color-golden);
+        font-family: var(--font-base);
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 41px;
+        letter-spacing: 0.04em;
+        text-transform: capitalize;
+      }
+    }
+
+    img {
+      width: 370px;
+      margin-top: 3rem;
+
+      @include devices(computer) {
+        width: 250px;
+      }
+
+      @include devices(computer) {
+        width: 235px;
+      }
+
+      @include devices(mobile) {
+        width: 80%;
+      }
+    }
+  }
+}
