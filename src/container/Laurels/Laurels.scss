@@ -1,0 +1,30 @@
+@import "../../index.scss";
+
+.app__laurels {
+  &_awards {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &-card {
+      flex: 1;
+      min-width: 360px;
+      margin: 1rem;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      img {
+        width: 70px;
+      }
+
+      &_content {
+        margin-left: 1rem;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
