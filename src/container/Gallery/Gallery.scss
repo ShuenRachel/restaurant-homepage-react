@@ -1,0 +1,127 @@
+@import "../../index.scss";
+
+.app__gallery {
+  background: var(--color-black);
+  padding: 4rem 0 4rem 6rem;
+  display: flex;
+
+  @include devices(tablet) {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+
+  &-content {
+    flex: 1;
+    min-width: 500px;
+    padding-right: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    @include devices(mobile) {
+      min-width: 0;
+      padding-right: 0;
+    }
+
+    p {
+      color: #aaa;
+      margin-top: 2rem;
+
+      @include devices(tablet) {
+        margin-top: 1rem;
+      }
+    }
+
+    button {
+      margin-top: 1rem;
+    }
+  }
+
+  &-images {
+    flex: 1;
+    display: flex;
+    max-width: 50%;
+    position: relative;
+
+    @include devices(computer) {
+      max-width: 45%;
+    }
+
+    @include devices(tablet) {
+      max-width: 100%;
+    }
+
+    &_container {
+      display: flex;
+      width: max-content;
+      overflow-x: scroll;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    &_card {
+      position: relative;
+      min-width: 301px;
+      height: 447px;
+      margin-right: 2rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 1;
+        transition: 0.5s ease;
+      }
+
+      &:hover {
+        img {
+          opacity: 0.35;
+        }
+
+        .gallery__image-icon {
+          opacity: 1;
+        }
+      }
+    }
+
+    &_arrows {
+      width: 100%;
+      padding: 0 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: absolute;
+      bottom: 5%;
+    }
+  }
+}
+
+.gallery {
+  &__image-icon {
+    position: absolute;
+    color: #fff;
+    font-size: 2rem;
+    opacity: 0.5;
+    transition: 0.5s ease;
+    cursor: pointer;
+  }
+
+  &__arrow-icon {
+    color: var(--color-golden);
+    font-size: 2rem;
+    cursor: pointer;
+    background-color: var(--color-black);
+    border-radius: 5px;
+
+    &:hover {
+      color: var(--color-white);
+    }
+  }
+}
