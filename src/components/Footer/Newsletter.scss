@@ -1,0 +1,48 @@
+@import "../../index.scss";
+
+.app__newsletter {
+  padding: 2rem 4rem;
+  border: 1px solid var(--color-golden);
+  background: var(--color-black);
+
+  @include devices(mobile) {
+    padding: 1.5rem;
+  }
+
+  &-heading {
+    text-align: center;
+  }
+
+  &-input {
+    margin-top: 3rem;
+
+    @include devices(mobile) {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    input {
+      width: 620px;
+      margin-right: 2rem;
+      padding: 0.75rem 1rem;
+      background: var(--color-black);
+      border: 1px solid var(--color-golden);
+      border-radius: 5px;
+      font-size: 1rem;
+      font-family: var(--font-base);
+      color: var(--color-white);
+
+      @include devices(tablet) {
+        width: 100%;
+      }
+
+      @include devices(mobile) {
+        margin: 0;
+      }
+    }
+
+    button {
+      width: max-content;
+    }
+  }
+}
